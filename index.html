@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e8f5e9; /* Warna latar belakang lembut */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            position: absolute;
+            top: 20px;
+            color: #d32f2f;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: rotate(-45deg);
+            animation: heartbeat 2s infinite;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 45px;
+            top: 0;
+        }
+
+        @keyframes heartbeat {
+            0%, 20%, 40%, 60%, 80%, 100% {
+                transform: scale(1);
+            }
+            10%, 30%, 50%, 70%, 90% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>I Love You!</h1>
+    <div class="heart"></div>
+</body>
+</html>
